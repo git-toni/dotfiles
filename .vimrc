@@ -16,9 +16,12 @@ let mapleader=","
 nmap <leader>w :w!<cr>
 
 "" DO NOT SAVE SWAPS IN THE SAME DIRECTORY
-set backupdir=~/vimtmp
-set swapfile
-set dir=~/vimtmp
+""set backupdir=~/vimtmp
+""set swapfile
+""set dir=~/vimtmp
+set nobackup
+set nowritebackup
+set noswapfile
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related

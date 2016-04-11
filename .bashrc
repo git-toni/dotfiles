@@ -60,7 +60,8 @@ source ~/.S3_credentials.sh
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 ### PhantomJS
-export PATH="/media/data/soft/phantomjs-1.9.7-linux-x86_64/bin:$PATH"
+##export PATH="/media/data/soft/phantomjs-1.9.7-linux-x86_64/bin:$PATH"
+export PATH="$HOME/dotvim/voom:$PATH"
 
 
 
