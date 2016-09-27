@@ -92,3 +92,15 @@ set wildignore+=*/.git/*,*/node_modules,*/bower_components
 "Swap top/bottom or left/right split ------ Ctrl+W R
 "Break out current window into a new tabview ---------- Ctrl+W T
 "Close every window in the current tabview but the current one  -------  Ctrl+W o
+
+"AUTOCLOSE LINE WITH semicolon or whatever char
+"inoremap <leader>; <C-o>A;
+"inoremap ;<cr> <end>;<cr>
+"inoremap .<cr> <end>.
+"inoremap ;;<cr> <down><end>;<cr>
+"inoremap ..<cr> <down><end>.
+
+inoremap <leader>; <C-o>A;
+
+" Toggle PASTE MODE so pasting behaves normally
+set pastetoggle=<F10>

@@ -13,7 +13,8 @@ set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-
+#font -misc-fixed-big-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:DejaVu Sans Mono 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -208,15 +209,21 @@ bar {
 #GIRONA 19"
 #exec_always --no-startup-id xrandr --output VGA1 --mode 1440x900 --right-of LVDS1
 #BCN 24"
-exec_always --no-startup-id xrandr --output VGA1 --mode 1920x1080 --right-of LVDS1
+#exec_always --no-startup-id xrandr --output VGA1 --mode 1920x1080 --right-of LVDS1
 #assign applicatons
 assign[class="Firefox"] 2: www
 assign[class="Chromium-browser"] 2: www
 #AUTOSTART APPLICATIONS
 exec nitrogen --restore
-exec volumeicon
-#exec firefox
-exec ~/firefox/firefox
+#exec volumeicon
+exec firefox
+#exec ~/firefox/firefox
+# BCN
 exec gtk-redshift -l 41.38:2.16
+#exec gtk-redshift -l 8.3405:115.092
 #exec dropbox start
-exec xfce4-power-manager
+#exec xfce4-power-manager
+exec mate-power-manager
+exec mate-volume-control-applet
+#xrandr --fbmm 294x166
+#exec_always --no-startup-id xrandr --fbmm 294x166 --mode 1920x1080
