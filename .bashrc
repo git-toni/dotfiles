@@ -1,3 +1,10 @@
+# Import custom scripts
+for f in ~/dotfiles/sh/*
+do
+  . ${f}
+done
+
+
 
 function to () {
    if test "$2"; then
@@ -76,3 +83,5 @@ eval "$(rbenv init -)"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+
