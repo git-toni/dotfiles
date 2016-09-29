@@ -67,8 +67,10 @@ set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
 hi Folded ctermbg=darkgrey
 "Autosave folding state at quit
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+"au BufWinLeave * mkview
+"au BufWinEnter * silent loadview
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -104,3 +106,5 @@ inoremap <leader>; <C-o>A;
 
 " Toggle PASTE MODE so pasting behaves normally
 set pastetoggle=<F10>
+" uses the register + AND the vim's instance for ALL yank, delete, change etx
+set clipboard=unnamedplus 
