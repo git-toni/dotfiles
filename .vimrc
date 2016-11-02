@@ -5,6 +5,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 filetype plugin indent on
 set number 
 syntax on
+syntax enable
 set mouse=a
 
 "" ADD A line to diferently indented blocks of code
