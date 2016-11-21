@@ -110,3 +110,5 @@ set pastetoggle=<F10>
 " uses the register + AND the vim's instance for ALL yank, delete, change etx
 set clipboard=unnamedplus 
 let g:jsx_ext_required = 0
+let g:user_emmet_mode='a'    "enable all function in all mode.
+let g:user_emmet_leader_key='<C-w>'
