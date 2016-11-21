@@ -109,3 +109,4 @@ inoremap <leader>; <C-o>A;
 set pastetoggle=<F10>
 " uses the register + AND the vim's instance for ALL yank, delete, change etx
 set clipboard=unnamedplus 
+let g:jsx_ext_required = 0
