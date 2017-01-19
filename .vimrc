@@ -1,6 +1,23 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-execute pathogen#helptags()
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'kien/ctrlp.vim'
+Plug 'ervandew/supertab'
+Plug 'isRuslan/vim-es6'
+Plug 'kchmck/vim-coffee-script'
+Plug 'leafgarland/typescript-vim'
+Plug 'slim-template/vim-slim'
+Plug 'wavdev/vim-stylus'
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
+Plug 'vim-ruby/vim-ruby'
+Plug 'scrooloose/nerdtree'
+Plug 'elixir-lang/vim-elixir'
+Plug 'mxw/vim-jsx', { 'for': [ 'jsx','javascript.jsx'] }
+Plug 'mattn/emmet-vim' ",{ 'for': ['javascript.jsx', 'html', 'css'] }
+call plug#end()
+
+
+
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 filetype plugin indent on
 set number 
@@ -111,4 +128,12 @@ set pastetoggle=<F10>
 set clipboard=unnamedplus 
 let g:jsx_ext_required = 0
 let g:user_emmet_mode='a'    "enable all function in all mode.
-let g:user_emmet_leader_key='<C-w>'
+let g:user_emmet_leader_key='<C-E>'
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends' : 'jsx',
+\  },
+\}
+
+
+au BufNewFile,BufRead *.ejs set filetype=html
