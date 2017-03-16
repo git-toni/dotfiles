@@ -84,4 +84,13 @@ eval "$(rbenv init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
+export ANDROID_HOME="/media/toni/data/Android/Sdk"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
+###-tns-completion-start-###
+if [ -f /home/toni/.tnsrc ]; then 
+    source /home/toni/.tnsrc 
+fi
+###-tns-completion-end-###
+export VAGRANT_HOME="/media/toni/data/vagrant"
