@@ -6,16 +6,32 @@ Plug 'isRuslan/vim-es6'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'slim-template/vim-slim'
-Plug 'wavdev/vim-stylus'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-ruby/vim-ruby'
 Plug 'scrooloose/nerdtree'
 Plug 'elixir-lang/vim-elixir'
 Plug 'mxw/vim-jsx', { 'for': [ 'jsx','javascript.jsx'] }
-Plug 'mattn/emmet-vim' ",{ 'for': ['javascript.jsx', 'html', 'css'] }
+Plug 'mattn/emmet-vim' 
+Plug 'pearofducks/ansible-vim'
+Plug 'itchyny/lightline.vim'
+Plug 'jacoborus/tender.vim'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
+"" Plug 'mattn/emmet-vim' ,{ 'for': ['javascript.jsx', 'html', 'css'] }
 
+if (has("termguicolors"))
+ set termguicolors
+endif
+colorscheme tender
+" For Neovim 0.1.3 and 0.1.4
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+
+let g:lightline = { 'colorscheme': 'tender' }
+
+"""set background=dark
+"""colorscheme solarized
 
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -105,6 +121,8 @@ set laststatus=2
 set splitbelow  
 set splitright
 set wildignore+=*/.git/*,*/node_modules,*/bower_components
+set fillchars+=vert:\│
+hi vertsplit ctermfg=36 ctermbg=235
 
 "Max out the height of the current split   ------  ctrl + w _
 "Max out the width of the current split------ ctrl + w |
