@@ -24,14 +24,22 @@ if (has("termguicolors"))
  set termguicolors
 endif
 colorscheme tender
+"colorscheme wwdc16
 " For Neovim 0.1.3 and 0.1.4
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 
-let g:lightline = { 'colorscheme': 'tender' }
+let g:lightline = { 
+      \ 'colorscheme': 'tender' ,
+      \   'active': {
+      \     'left': [ [ 'mode', 'paste' ], [ 'readonly', 'relativepath', 'modified' ] ],
+      \     'right':[ ['lineinfo'], [ 'percent' ] ]
+      \   }
+      \ }
 
-"""set background=dark
-"""colorscheme solarized
+function! LightLineFilename()
+  return expand('%')
+endfunction
 
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -121,7 +129,7 @@ set laststatus=2
 set splitbelow  
 set splitright
 set wildignore+=*/.git/*,*/node_modules,*/bower_components
-set fillchars+=vert:\│
+set fillchars+=vert:\│ 
 hi vertsplit ctermfg=36 ctermbg=235
 
 "Max out the height of the current split   ------  ctrl + w _
